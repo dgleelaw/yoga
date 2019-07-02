@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/public/jquery.min.js"></script>
+		<script>
+		
+			$(function(){
+				$("#demo1").click(function(){
+					$.ajax({
+						
+						url:"http://localhost:8080/coach/findVenues",
+						dataType:"json",
+						success:function(data){
+							var table = $("<table border='1'></table>")
+							for(var i=0;i<data.length;i++){
+								var po = data[i]
+								var tr = $("<tr></tr>")
+								var head = $("<td></td>").text("头像");
+								var name = $("<td></td>").text(po.name);
+								var detail = $("<td></td>").text(po.detail)
+								var demo = $("<td></td>")
+								var a = $("<a href='/venues/find?id="+po.id+"'></a>").text("查看")
+								demo.append(a)
+								tr.append(head)
+								tr.append(name)
+								tr.append(detail)
+								tr.append(demo)
+								table.append(tr)
+							}
+							$("#findv").append(table)
+						}
+					})
+				})
+				
+				$("#demo2").click(function(){
+					$.ajax({
+						url:"http://localhost:8080/coach/findMyTrainee",
+						data:{uid:3},
+						dataType:"json",
+						success:function(data){
+							var table = $("<table border='1'></table>")
+							for(var i=0;i<data.length;i++){
+								var po = data[i]
+								var tr = $("<tr></tr>")
+								var head = $("<td></td>").text("头像");
+								var name = $("<td></td>").text(po.name);
+								var addr = $("<td></td>").text(po.addr)
+								var demo = $("<td></td>").text("查看");
+								tr.append(head)
+								tr.append(name)
+								tr.append(addr)
+								tr.append(demo)
+								table.append(tr)
+							}
+							$("#findmt").append(table)
+						}
+					})
+				})
+				
+				
+				
+				$("#demo3").click(function(){
+					$.ajax({
+						url:"http://localhost:8080/coach/findMyVenues",
+						data:{uid:3},
+						dataType:"json",
+						success:function(data){
+							var table = $("<table border='1'></table>")
+							for(var i=0;i<data.length;i++){
+								var po = data[i]
+								var tr = $("<tr></tr>")
+								var head = $("<td></td>").text("头像");
+								var name = $("<td></td>").text(po.name);
+								var addr = $("<td></td>").text(po.addr)
+								var demo = $("<td></td>").text("查看");
+								tr.append(head)
+								tr.append(name)
+								tr.append(addr)
+								tr.append(demo)
+								table.append(tr)
+							}
+							$("#findmv").append(table)
+						}
+					})
+				})
+				
+				
+				
+				
+				$("#demo4").click(function(){
+					$.ajax({
+						url:"http://localhost:8080/coach/findHintMessage",
+						data:{uid:3},
+						dataType:"json",
+						success:function(data){
+							var table = $("<table border='1'></table>")
+							for(var i=0;i<data.length;i++){
+								var po = data[i]
+								var tr = $("<tr></tr>")
+								var head = $("<td></td>").text("头像");
+								var name = $("<td></td>").text(po.name);
+								var addr = $("<td></td>").text(po.content)
+								var demo = $("<td></td>");
+								var remove = $("<a href='/coach/removeMes?id="+po.id+"'></a>").text("删除")
+								demo.append(remove)
+								tr.append(head)
+								tr.append(name)
+								tr.append(addr)
+								tr.append(demo)
+								table.append(tr)
+							}
+							$("#findmx").append(table)
+						}
+					})
+				})
+				
+				
+				
+				
+				$("#demo5").click(function(){
+					$.ajax({
+						url:"http://localhost:8080/coach/findResMessage",
+						data:{uid:3},
+						dataType:"json",
+						success:function(data){
+							var table = $("<table border='1'></table>")
+							for(var i=0;i<data.length;i++){
+								var po = data[i]
+								var tr = $("<tr></tr>")
+								var head = $("<td></td>").text("头像");
+								var name = $("<td></td>").text(po.name);
+								var addr = $("<td></td>").text(po.content)
+								var pri = $("<td></td>").text(po.private_Course.startTime)
+								var demo1 = $("<td></td>");
+								var demo2 = $("<td></td>");
+								var adopt = $("<a href='/coach/adopt?uid1="+po.uid1+"&uid2="+po.uid2+"&price="+po.private_Course.price+"&startTime="+po.private_Course.startTime+"&vid="+po.vid+"&mid="+po.id+"&pid="+po.private_Course.id+"'></a>").text("接受")
+								var refuse = $("<a href=''></a>").text("拒绝")
+								demo1.append(adopt)
+								demo2.append(refuse)
+								tr.append(head)
+								tr.append(name)
+								tr.append(addr)
+								tr.append(pri)
+								tr.append(demo1)
+								tr.append(demo2)
+								table.append(tr)
+							}
+							$("#findms").append(table)
+						}
+					})
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="查看场馆" id="demo1"/>
+		<input type="button" value="查看我的学员" id="demo2"/>
+		<input type="button" value="查看我的场馆" id="demo3"/>
+		<input type="button" value="我的消息"  id="demo4"/>
+		<input type="button" value="我的申请" id="demo5"/>
+		<div id="findv"></div>
+		<hr>
+		<div id="findmt"></div>
+		<hr>
+		<div id="findmv"></div>
+		<hr>
+		<div id="findmx"></div>
+		<hr>
+		<div id="findms"></div>
+	</body>
+</html>

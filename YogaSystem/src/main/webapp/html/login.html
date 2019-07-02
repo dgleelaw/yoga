@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>登录</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Sample content" name="description" />
+  <meta content="sample-author" name="author" />
+  <link rel="/shortcut icon" href="/images/favicon.ico">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="particles-js" class="zindex1"></div>
+  <!-- <header id="iframe-header">
+      <iframe src="_header.html" style="display:none" id="iframe-header"></iframe>
+      <div id="topnav">
+  <div class="top-header-animation">
+    <div id="particles-js" class="zindex1"></div>
+  </div>
+  <div class="added-element-header"></div>
+</div>
+    </header> -->
+  <section>
+    <div class="spinner">
+      <div class="loader">
+        <div class="bounce loader1 "></div>
+        <div class="bounce loader2 "></div>
+      </div>
+    </div>
+  </section>
+  <div class="account-pages"></div>
+  <div class="clearfix"></div>
+  <div class="wrapper-page login-page zurb-div-sm-12 zurb-div-md-4 zindex2">
+    <div class="text-center">
+      <img src="/images/logo.png" alt="" class="logo-large">
+    </div>
+    <div class="m-t-20 zurb-div-box p-30">
+      <div class="text-center">
+        <h3 class="text-uppercase font-bold mb-0">Sign In</h3>
+      </div>
+       <span style="float: right;"><a style="color: #6F89B4" href="messagelogin.html">短信登录</a></span>
+      <div class="">
+        <form class="form-horizontal m-t-20" action="index.html">
+          <div class="form-group">
+            <div class="zurb-div-xs-12">
+              <input id="acc" class="form-control" type="text" required="" placeholder="Username">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="zurb-div-xs-12">
+              <input id="pwd" class="form-control" type="password" required="" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group ">
+            <div class="zurb-div-xs-12">
+              <div class="checkbox checkbox-custom">
+                <input id="checkbox-signup" type="checkbox">
+                <label for="checkbox-signup"> Remember me </label>
+                 <span style="margin-left: 50px;"><a id="mes" style="color: red"></a></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center m-t-30">
+            <div class="zurb-div-xs-12">
+              <button  id="submit" class="btn btn-lg btn-secondary w-lg waves-effect waves-light btn-block" type="button" onclick="login()">Log In</button>
+            </div>
+          </div>
+          <div class="form-group m-t-30 mb-0 text-center">
+            <div class="zurb-div-sm-12">
+              <a href="reset.html" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+            </div>
+          </div>
+          <div class="form-group m-t-10 mb-0">
+            <div class="zurb-div-sm-12 text-center">
+              <p class="text-muted m-b-0">Don't have an account? <a href="register.html" class="text-secondary m-l-5"><b>Sign Up</b></a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script  src="/js/jquery.min.js"></script>
+  <script src="/js/login.js" ></script>
+  <script  src="/js/popper.min.js"></script>
+  <script  src="/js/bootstrap.min.js"></script>
+  <script  src="/js/waves.js"></script>
+  <script  src="/js/jquery.slimscroll.js"></script>
+  <script  src="/js/modernizr.min.js"></script>
+  <script  src="/js/plugins/particles.js-master/particles.js"></script>
+  <script  src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+  <script  src="/js/equalize.min.js"></script>
+  <script  src="/js/jquery.core.js"></script>
+  <script  src="/js/jquery.app.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <div style="margin-left: 650px ; margin-top: 100px" >
+<div ><input id="acc" type="text" name="acc" Placeholder="手机号"></div>
+<div ><input id="pwd" type="text" name="acc" Placeholder="密码"></div>
+<div ><input id="rpwd" type="text" name="acc" Placeholder="确认密码"></div>
+<div ><input id="code" type="text" name="code" Placeholder="验证码"><input type="button" onclick="registerCode()" value="获取验证码"></div>
+<div ><input id="submit" type="button" name="submit" value="登录" style="width: 86px;" onclick="login()"><input id="register" type="button" name="register" value="注册" style="width: 86px;" onclick="register()"></div>
+<div><a href="reset.html">忘记密码?</a></div>
+<div ></div>
+<script src="/js/login.js" ></script>
+</div> -->

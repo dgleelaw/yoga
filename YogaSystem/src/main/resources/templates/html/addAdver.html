@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta charset="utf-8" />
+<title>Sample 1</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Sample content" name="description" />
+	<meta content="sample-author" name="author" />
+	<link rel="shortcut icon" href="/images/favicon.ico">
+		<link href="/css/plugins/custombox/dist/custombox.min.css"
+			rel="stylesheet">
+			<link href="/css/style.css" rel="stylesheet" type="text/css" />
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/popper.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+</head>
+
+<script type="text/javascript">
+	$(function() {
+		showad()
+	})
+	function showad() {
+		$.ajax({
+			url : "/ad/findAllAd",
+			success : function(res) {								
+				var context2 = "";
+				for (var i = 0; i < res.length; i++) {
+					context2 += '<tr>'
+							+ '<td>'
+							+ '<img src='+res[i].img+' id="backimg">'
+							+ '</td>'
+							+ '<td>'
+							+ res[i].title
+							+ '</td>'
+							+ '<td>'
+							+ res[i].content
+							+ '</td>'
+							+ '<td><input type="checkbox" name="check" value='+res[i].id+'></td>'
+							+ '</tr>'
+				}
+				$("#tbody").append(context2);
+			}
+		})
+	}
+	
+	
+	function send() {
+		
+		$.ajax({
+			url : "/ad/insertAd",
+			type : 'post',//HTTP请求类型
+			data : {
+				title : $("#title").val(),
+				content : $("#content").val(),
+				img : $("#img").val()
+			},
+			success : function(data) {
+				alert(data);
+				 window.location.href = 'html/addAdver.html';
+			}
+		});
+
+	}
+			
+			
+	function delImg() {
+		var arr =[];                
+        var items = document.getElementsByName("check");                 
+        for (i = 0; i < items.length; i++) {                    
+            if (items[i].checked) {                        
+                arr.push(items[i].value);                    
+            }                
+        }
+		
+		$.ajax({
+			url : "/ad/deleteAd",
+			data:{
+        		id:arr
+        	},
+        	traditional: true,
+        	success:function(data){
+        	
+        		alert(data);
+        		 window.location.href = 'html/addAdver.html';
+        		
+        		
+        	}
+		})
+		
+			}
+</script>
+<body id="body-main">
+	<header id="iframe-header"> <iframe src="/_header.html"
+		style="display:none" id="iframe-header"></iframe>
+	<div id="topnav">
+		<div class="top-header-animation">
+			<div id="particles-js" class="zindex1"></div>
+		</div>
+		<div class="added-element-header"></div>
+	</div>
+	</header>
+
+	<div class="new-row zurb-row">
+		<div class="zurb-div-12">
+			<div class="zurb-div-box">
+				<table class="table table-bordered table-striped mb-0">
+	
+	
+	
+	  <form action="/upload" method="post" enctype="multipart/form-data">
+        <label>上传图片</label><br/>
+        <input type="file" name="file" />
+        
+        <button type="submit"  id="del" class="btn  btn-secondary w-lg waves-effect waves-light btn-block" 
+				>显示图片</button>
+        
+    </form>
+    <p>图片:</p>
+     <img  th:src="${filename}"   />
+    <hr/>
+    <input type="hidden" id="img" th:value="${filename}" />
+      <input type="text" name="nick" required placeholder="图片标题" class="form-control" id="title" value="">
+      <input type="text" name="nick" required placeholder="图片描述" class="form-control" id="content" value="">
+
+<button  id="del" class="btn  btn-secondary w-lg waves-effect waves-light btn-block" 
+				 onclick="send()">上传图片</button>
+				 <hr/>
+					<tbody id="tbody">
+
+					</tbody>
+				</table>
+				<button
+				 id="del" class="btn  btn-secondary w-lg waves-effect waves-light btn-block" 
+				 onclick="delImg()">删除图片</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<footer class="footer">
+					<div class="zurb-contents">
+						<div class="new-row zurb-row">
+							<div class="zurb-div-12 text-center">
+								Eon Admin © 2018-2019. All Rights Reserved By: <strong>
+									Spruko</strong>
+							</div>
+						</div>
+					</div>
+					</footer>
+
+					<script src="/js/waves.js"></script>
+					<script src="/js/jquery.slimscroll.js"></script>
+					<script src="/js/modernizr.min.js"></script>
+					<script src="/js/plugins/particles.js-master/particles.js"></script>
+					<script src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+					<script src="/js/plugins/custombox/dist/custombox.min.js"></script>
+					<script src="/js/plugins/custombox/dist/legacy.min.js"></script>
+					<script src="/js/equalize.min.js"></script>
+					<script src="/js/jquery.core.js"></script>
+					<script src="/js/jquery.app.js"></script>
+					<script src="/js/created.js"></script>
+</body>
+<style>
+#backimg {
+	height: 100px;
+	width: 300px;
+}
+
+.table {
+	margin: auto;
+	width: 900px;
+}
+
+#del {
+margin-top:5px;
+	margin-left: 80%;
+	width: 100px;
+}
+#title,#content{
+width: 300px;
+}
+
+</style>
+</html>

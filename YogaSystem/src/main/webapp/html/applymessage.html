@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>申请信息</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Sample content" name="description" />
+	<meta content="sample-author" name="author" />
+	<link rel="/shortcut icon" href="images/favicon.ico">
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="body-main">
+	<header id="topnav">
+	<div class="topbar-main relative">
+		<div class="zurb-full">
+			<div class="logo">
+				<a href="index.html" class="logo"> <img src="images/logo-sm.png"
+					alt="" height="26" class="logo-small"> <img
+						src="images/logo.png" alt="" class="logo-large"></a>
+			</div>
+			<div class="menu-other topbar-custom">
+				<ul class="list-unstyled topbar-right-menu float-right mb-0">
+					<shiro:guest>
+					
+					<!--注销按钮-->
+					<li class="dropdown notification-list notification-box"><a
+						class="nav-link dropdown-toggle waves-effect waves-light notification-box nav-user"
+						href="/logout"> 注销 </a></li>
+					
+					<li class="dropdown notification-list notification-box"><a
+						class="nav-link dropdown-toggle waves-effect waves-light notification-box nav-user"
+						href="/index"> 回到主页 </a></li>
+					
+					
+					<li class="menu-item"><a class="navbar-toggle nav-link">
+							<div class="lines">
+								<span></span> <span></span> <span></span>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="navbar-custom navbar-checker">
+		<div class="zurb-full">
+			<div id="navigation">
+				<ul class="navigation-menu">
+				
+					
+				
+					<li class="has-submenu" th:if="${session.role!=2}")><a href="/html/findvenues.html"><i
+							class="ti-home"></i> <span> 场馆查看 </span> </a></li>
+					<li class="has-submenu" th:if="${session.role!=1}"><a href="/trainee/findCoachMsg"><i
+							class="ti-receipt"></i> <span> 教练查看</span> </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</header>
+	<section>
+	<div class="spinner">
+		<div class="loader">
+			<div class="bounce loader1 "></div>
+			<div class="bounce loader2 "></div>
+		</div>
+	</div>
+	</section>
+	<div class="wrapper">
+		<div class="zurb-full">
+			<div class="new-row zurb-row">
+				<div class="zurb-div-sm-12">
+					<div class="hide-bread float-right">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="javascript:void(0)" id="request"> 教练请求</a></li>
+							<li class="breadcrumb-item"><a href="javascript:void(0)" id="hint">场馆请求</a></li>
+							<li class="breadcrumb-item"><a href="addAdver.html" id="hint">设置广告</a></li>
+						</ol>
+					</div>
+					<h4 class="page-title">请求信息</h4>
+				</div>
+			</div>
+			<div class="new-row zurb-row" id="traineeMes"></div>
+			<hr/>
+			<div class="new-row zurb-row" id="mes"></div>
+		</div>
+	</div>
+	<footer class="footer">
+	<div class="zurb-contents">
+		<div class="new-row zurb-row">
+			<div class="zurb-div-12 text-center">
+				Eon Admin © 2018-2019. All Rights Reserved By: <strong>
+					Spruko</strong>
+			</div>
+		</div>
+	</div>
+	</footer>
+	<a href="#body-main " id="goTop"><i class="fa fa-chevron-up"></i></a>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/waves.js"></script>
+	<script src="/js/jquery.slimscroll.js"></script>
+	<script src="/js/modernizr.min.js"></script>
+	<script src="/js/plugins/particles.js-master/particles.js"></script>
+	<script src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+	<script src="/js/equalize.min.js"></script>
+	<script src="/js/jquery.core.js"></script>
+	<script src="/js/jquery.app.js"></script>
+	<script src="/js/created.js"></script>
+	<script src="/js/applymessage.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+		<tr th:each="follow : ${follows}">
+			<td th:text="${follow.uid}"></td>
+			<td th:text="${follow.name}"></td>
+			<!-- 传参，多个参数之前用逗号隔开 -->
+		</tr>
+	</table>
+</body>
+</html>

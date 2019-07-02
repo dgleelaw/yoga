@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <script  src="/js/jquery.min.js"></script>
+ <script type="text/javascript">
+ $(function(){
+	 $.ajax({
+		 url:"user/test",
+		 success:function(data){
+			
+			 
+		 }
+	 })
+ })
+ </script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="text" th:value="${coach.sex}"  >
+<input type="radio" value="0" name="xx" ${sex==0 ? "checked='checked'" : ""} />女
+<input type="radio" value="1" name="xx" ${sex==1 ? "checked='checked'" : ""} />男
+
+</body>
+</html>

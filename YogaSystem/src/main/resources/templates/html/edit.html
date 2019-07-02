@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+</head>
+<body>
+	<form action="#">
+		用户id:<input type="text" name="uid" id="uid"><br>
+		用户名:<input type="text" name="uname" id="uname"><br>
+		<input type="submit" value="提交">
+	</form>
+	<script type="text/javascript" th:inline="javascript">
+		var uid = [[${user.uid}]];
+		var uname = [[${user.uname}]];
+		alert(uid);
+		$("#uid").val(uid);
+		$("#uname").val(uname);
+	</script>
+</body>
+</html>

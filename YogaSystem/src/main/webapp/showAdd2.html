@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title>Sample 1</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Sample content" name="description" />
+<meta content="sample-author" name="author" />
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link href="/css/plugins/custombox/dist/custombox.min.css"
+	rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/popper.min.js"></script>
+<link rel="stylesheet"
+	href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+	function hi() {
+		$("#myCarousel").css("display", "none");
+		$("#button1").css("display", "none");
+	}
+	$(function() {
+
+		$("#slidershow").carousel({
+			interval : 3000
+		});
+		$("#slidershow a.left").click(function() {
+			$(".carousel").carousel("prev");
+		});
+		$("#slidershow a.right").click(function() {
+			$(".carousel").carousel("next");
+		});
+
+		$.ajax({
+					url : "/ad/findAllAd",
+					type : "post",
+					success : function(res) {
+						var context1 = "";
+						var context2 = "";
+						for (var i = 0; i < res.length; i++) {
+							if (i == 0) {
+								context1 += '<li class="active" data-target="#slidershow" data-slide-to="0"></li>';
+								context2 += '<div class="item active">'
+										+ '<a href="##">'
+										+ '<img src='+res[i].img+' id="img1"></a>'
+										+ '</div>';
+							} else {
+								context1 += '<li data-target="#slidershow" data-slide-to='+i+'></li>';
+								context2 += '<div class="item ">'
+										+ '<a href="##">'
+										+ '<img src='+res[i].img+' id="img1" ></a>'
+										+ '</div>';
+							}
+						}
+						
+						$("#liimg").append(context1);
+						$("#adimg").append(context2);
+					}
+				})
+
+	})
+</script>
+
+<body>
+	<header id="iframe-header">
+		<iframe src="/_header.html" style="display: none" id="iframe-header"></iframe>
+		<div id="topnav">
+			<div class="top-header-animation">
+				<div id="particles-js" class="zindex1"></div>
+			</div>
+			<div class="added-element-header"></div>
+		</div>
+	</header>
+	<div id="slidershow" class="carousel slide" data-ride="carousel"
+		data-pause="hover" data-wrap="true"
+		style="margin-top: 5rem; width: 1200px; height: 500px; margin-left: auto; margin-right: auto;">
+		<!-- 设置图片轮播的顺序 -->
+		<ol class="carousel-indicators" id="liimg">
+			<!-- 	<li class="active" data-target="#slidershow" data-slide-to="0"></li>
+				<li data-target="#slidershow" data-slide-to="1"></li>
+				<li data-target="#slidershow" data-slide-to="2"></li> -->
+		</ol>
+		<!-- 设置轮播图片 -->
+		<div class="carousel-inner" id="adimg">
+			<!-- <div class="item active">
+					<a href="##"><img src="img/1223.jpg" id="img1"></a>
+				</div>
+				<div class="item ">
+					<a href="##"><img src="img/u=1619683067,2993665289&fm=26&gp=0.jpg" alt=""></a>
+				</div> -->
+
+		</div>
+		<a class="left carousel-control" href="#slidershow" role="button">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a> <a class="right carousel-control" href="#slidershow" role="button">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
+<footer class="footer">
+    <div class="zurb-contents">
+      <div class="new-row zurb-row">
+        <div class="zurb-div-12 text-center"> Eon Admin © 2018-2019. All Rights Reserved By: <strong> Spruko</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+	<script src="/js/waves.js"></script>
+	<script src="/js/jquery.slimscroll.js"></script>
+	<script src="/js/modernizr.min.js"></script>
+	<script src="/js/plugins/particles.js-master/particles.js"></script>
+	<script src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+	<script src="/js/plugins/custombox/dist/custombox.min.js"></script>
+	<script src="/js/plugins/custombox/dist/legacy.min.js"></script>
+	<script src="/js/equalize.min.js"></script>
+	<script src="/js/jquery.core.js"></script>
+	<script src="/js/jquery.app.js"></script>
+	<script src="/js/created.js"></script>
+	
+</body>
+<style>
+body {
+	background-color: #ECEEF9;
+}
+
+#img1 {
+	height: 500px;
+}
+
+#slidershow {
+	vertical-align: middle;
+}
+</style>
+</html>

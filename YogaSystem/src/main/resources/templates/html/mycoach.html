@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+<tr>
+<td>姓名</td>
+<td>联系电话</td>
+<td>地址</td>
+<td>身份类型</td>
+</tr>
+<tr th:each="coachs:${coachs}">
+<td th:text="${coachs.name}"></td>
+<td th:text="${coachs.phone}"></td>
+<td th:text="${coachs.coachstatus}"></td> 
+<td th:text="${coachs.addr}"></td> 
+</tr>
+</table> 
+</body>
+</html>

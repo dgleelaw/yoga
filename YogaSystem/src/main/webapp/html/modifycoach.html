@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+head>
+<meta charset="utf-8" />
+  <title>修改教练资料</title>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=R8YywfG4g6hRyZOL1tyEnnlXy0qAzfpB"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Sample content" name="description" />
+  <meta content="sample-author" name="author" />
+  <link rel="/shortcut icon" href="/images/favicon.ico">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="body-main">
+  <header id="iframe-header">
+    <iframe src="/_header.html" style="display:none" id="iframe-header"></iframe>
+    <div id="topnav">
+      <div class="top-header-animation">
+        <div id="particles-js" class="zindex1"></div>
+      </div>
+      <div class="added-element-header"></div>
+    </div>
+  </header>
+  <section>
+    <div class="spinner">
+      <div class="loader">
+        <div class="bounce loader1 "></div>
+        <div class="bounce loader2 "></div>
+      </div>
+    </div>
+  </section>
+  <div class="wrapper">
+    <div class="zurb-full">
+      <div class="new-row zurb-row">
+        <div class="zurb-div-sm-12">
+          <div class="hide-bread float-right">
+            <ol class="breadcrumb">              
+            </ol>
+          </div>
+          <h4 class="page-title">Message</h4>
+        </div>
+      </div>
+      <div class="new-row zurb-row">
+        <div class="zurb-div-xl-12">
+          <div class="card m-b-20">
+            <h5 class="card-header">Coach Form</h5>
+            <div class="card-body" style="height: 1250px;">
+            <div id="pic" style="width: 80px;height: 80px ;border: 1px solid; margin-left: 510px;"><img alt="" src="/headimg/yuga.jpg"width="80px";height="80px"></div>
+ <br>
+ <br>
+  <div >
+<form id="form" enctype="multipart/form-data" style="margin-left: 390px;">
+<input id="file1" type="file" name="picture">
+<input  id="up" type="button" value="上传" onclick="upload()" />
+</form>
+</div>
+              
+                <div class="form-group" id="coachName">
+                  <label for="userName3">User Name*</label>
+                  <input type="text" name="nick" required placeholder="Enter user name" class="form-control" id="name">
+                </div>
+                <div class="form-group" >
+                  <label for="sex">sex*</label>
+    
+                  <div class="form-control" id="coachSex">性别 <input type="radio" name="sex" value="1">男 <input type="radio" name="sex" value="0" >女</div>
+                  
+                </div>
+                
+                  <div class="form-group">
+                  <label for="passWord2">Address *</label>
+                  <div class="form-control" >
+				<select id="selProvince" onchange="changeCity( )" style="width:100px">
+					<option>--选择省份--</option>
+				</select>
+				<select id="selCity"  onchange="changeCounty( )" style="width:100px">
+					<option>--选择城市--</option>
+				</select>
+				<select id="selCounty"  onchange="changeTown( )" style="width:100px">
+					<option>--选择区县--</option>
+				</select>
+				<select id="selTown" style="width:100px">
+					<option>--选择街道镇--</option>
+				</select><br/><br/>
+				</div>
+				详细的地址*必填通过地图选取：<div id="detailbaidu">
+				<input class="form-control" type="text" class="f-input"/ id="detailAddress"  ></div>
+			</div>
+			<div id="allmap" class="form-control" style="height: 300px"></div>
+			<div id="zuo" >
+				<input id="vx" type="hidden"  placeholder="横坐标"/>
+				<input id="vy" type="hidden"  placeholder="纵坐标"/>
+			</div>
+                <div class="form-group" id="coachSchool" style="margin-top: 10px"> 
+                <label for="school">流派 *</label>
+                <input id="school" type="text" name="school" Placeholder="流派" class="form-control">
+                </div>
+              <div class="form-group" id="coachSalary">
+                <label for="salary">收费标准 *</label>
+              <input id="salary" type="text" name="salary" Placeholder="收费标准人民币" class="form-control"> 
+                </div>
+                <div class="form-group">
+                  <label for="selauthstatus">任课类型 *</label>
+              <select id="selauthstatus"  style="width:100px">
+					<option>--选择类型--</option>
+					<option>全职</option>
+					<option>代课</option>
+					<option>兼职</option>
+				</select>
+                </div>
+                
+                 <div class="form-group" >
+                <label for="time">是否任课 *</label>
+               <div class="form-control" id="coachTime"><input type="radio" name="time" value="1">是 <input type="radio" name="time" value="0">否</div>
+                </div>
+<div  id="coachstate">
+<input id="state" type="radio" name="infostatus" value="0">保密
+<input id="state" type="radio" name="infostatus" value="1">好友公开
+<input id="state" type="radio" name="infostatus" value="2">全部公开	
+</div>
+                <div class="form-group text-left mb-0"style="margin-top: 30px;margin-left: 42%">
+                  <button class="btn btn-success waves-effect waves-light" type="button" onclick="coachResubmit()"> Submit </button>
+                  <button type="button" class="btn btn-danger waves-effect waves-light m-l-5" onclick="back()"> Cancel </button>
+                </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+        <script  src="/js/jquery.min.js"></script>
+<script src="/js/addcoach.js" ></script>
+<script src="/js/address.js" ></script>
+<script  src="/js/baidumap.js"></script>
+<script src="/js/modifycoach.js" ></script>
+  <script  src="/js/popper.min.js"></script>
+  <script  src="/js/bootstrap.min.js"></script>
+  <script  src="/js/waves.js"></script>
+  <script  src="/js/jquery.slimscroll.js"></script>
+  <script  src="/js/modernizr.min.js"></script>
+  <script  src="/js/plugins/particles.js-master/particles.js"></script>
+  <script  src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+  <script  src="/js/plugins/parsleyjs/dist/parsley.min.js"></script>
+  <script  src="/js/equalize.min.js"></script>
+  <script  src="/js/jquery.core.js"></script>
+  <script  src="/js/jquery.app.js"></script>
+  <script  src="/js/created.js"></script>
+  <script  src="/js/created.js"></script>
+  <script >
+    $(document).("ready", function(e) {
+      $('form').parsley();
+    });
+  </script>
+</body>
+</html>

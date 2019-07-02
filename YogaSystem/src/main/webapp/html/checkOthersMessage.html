@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<title>Sample 1</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Sample content" name="description" />
+	<meta content="sample-author" name="author" />
+	<link rel="shortcut icon" href="/images/favicon.ico">
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script src="/js/jquery.min.js"></script>
+</head>
+<body id="body-main">
+	<script type="text/javascript">
+	
+	
+	
+	$(function() {
+		$.ajax({
+			url:"/follows/findFollowid",
+			data:{
+				otherUid: $("#otheruid").val(),
+				uid:$("#uid").val()
+			},
+			success:function(result){
+				
+				var img=result.img;
+				var address=result.address;
+				var trainee=result.trainee;
+				var coach=result.coach;
+				var venues=result.venues;
+				var message=result.message;
+				var con="";
+				var image="";
+				var button="";
+				if(trainee==null&&coach==null&&venues==null){
+					con+='<tr><td><p>'+message+'</p></td></tr>'
+						
+						$("#tbody").append(con);
+				}
+				 if(trainee!=null){
+					 button+='<button type="button" onclick="chat()"class="btn btn-info waves-effect waves-light">发送信息</button>'
+					image+='<img src="/upload/1223.jpg" class="img-circle" id="headImg">'
+						con+='<tr><td><p>名字</p></td>'
+						+'<td><p> '+trainee.name+' </p></td>'
+						+'</tr>'
+						+'<tr><td><p>职位</p></td>'
+						+'<td><p> 学员</p></td></tr>'
+						+'<tr><td><p>性别</p></td>'
+						if(trainee.sex==0){
+							con+='<td><p> 女 </p></td>'
+						}else {
+							con+='<td><p> 男 </p></td>'
+						}
+						con+='</tr>'
+						+'<tr><td><p>电话</p></td><td><p> '+trainee.phone+'</p></td></tr>'						
+						+'<tr><td><p>地址</p></td>'
+						+'<td><p> '+address.province+'&nbsp&nbsp&nbsp'+address.city+'&nbsp&nbsp&nbsp'
+						+address.county+'&nbsp&nbsp&nbsp'						
+						+address.town+'&nbsp&nbsp&nbsp'						
+						
+						+'</p></td></tr>'
+						
+						+'<tr><td><p>详细地址</p></td>'
+						+'<td><p>'					
+						+address.detail+
+						+'</p></td></tr>'
+						$("#button").append(button);
+						$("#cbody").append(image);
+						$("#tbody").append(con);
+				}
+				 if(coach!=null){
+					 button+='<button type="button" onclick="chat()"class="btn btn-info waves-effect waves-light">发送信息</button>'
+					image+='<img src="/upload/1223.jpg" class="img-circle" id="headImg">'
+					con+='<tr><td><p>名字</p></td>'
+						+'<td><p> '+coach.name+' </p></td>'
+						+'</tr>'
+						+'<tr><td><p>职位</p></td>'
+						+'<td><p>教练</p></td>'
+						+'</tr>'
+						+'<tr><td><p>性别</p></td>'
+						if(coach.sex==0){
+							con+='<td><p> 女 </p></td>'
+						}else {
+							con+='<td><p> 男 </p></td>'
+						}
+						con+='</tr>'
+							+'<tr><td><p>电话</p></td>'
+							+'<td><p>'+coach.phone+'</p></td>'
+							+'</tr>'
+							+'<tr><td><p>流派</p></td>'
+							+'<td><p>'+coach.school+'</p></td>'
+							+'</tr>'
+							+'<tr><td><p>授课类型</p></td>'
+							+'<td><p>'+coach.authstatus+'</p></td>'
+							+'</tr>'
+							+'<tr><td><p>认证</p></td>'
+							+'<td><p>'+coach.authentication+'</p></td>'
+							+'</tr>'
+							+'<tr><td><p>地址</p></td>'
+							+'<td><p> '+address.province+'&nbsp&nbsp&nbsp'+address.city+'&nbsp&nbsp&nbsp'
+							+address.county+'&nbsp&nbsp&nbsp'						
+							+address.town+'&nbsp&nbsp&nbsp'			
+						
+							+'</p></td></tr>'
+							+'<tr><td><p>详细地址</p></td>'
+							+'<td><p>'					
+							+address.detail+
+							+'</p></td></tr>'
+							$("#button").append(button);
+							$("#cbody").append(image);
+							$("#tbody").append(con);
+				}
+				
+				 if(venues!=null){
+					 button+='<button type="button" onclick="chatroom()"class="btn btn-info waves-effect waves-light">加入聊天室</button>'
+					image+='<img src="/upload/1223.jpg" class="img-circle" id="headImg">'
+					con+='<tr><td><p>名字</p></td>'
+							+'<td><p> '+venues.name+' </p></td>'
+							+'</tr>'
+							+'<tr><td><p>职位</p></td>'
+							+'<td><p>瑜伽会馆</p></td>'
+							+'</tr>'
+							+'<tr><td><p>电话</p></td>'
+							+'<td><p>'+venues.phone+'</p></td>'
+							+'</tr>'
+							+'<tr><td><p>描述</p></td>'
+							+'<td><p>'+venues.descrie+'</p></td>'
+							+'</tr>'
+							+'<tr><td><p>场馆图片</p></td>'
+							+'<td><div id="im">'
+							 for (var i = 0; i < img.length; i++) {
+								 con+='<img src='+img[i]+'  id="venImg">'
+								/* image+= '<img src='+img[i]+' class='img-circle' id='headImg'>' */
+							} 							
+							con+='</div></td>'
+							+'</tr>'
+							+'<tr><td><p>地址</p></td>'
+							+'<td><p> '+address.province+'&nbsp&nbsp&nbsp'+address.city+'&nbsp&nbsp&nbsp'
+							+address.county+'&nbsp&nbsp&nbsp'						
+							+address.town+'&nbsp&nbsp&nbsp'			
+						
+							+'</p></td></tr>'
+							+'<tr><td><p>详细地址</p></td>'
+							+'<td><p>'					
+							+address.detail+
+							+'</p></td></tr>'
+							$("#button").append(button);
+							$("#tbody").html(con);
+							
+				}
+				
+			}
+		});
+	});
+	function chat() {
+		var url="http://localhost:8080/user/chat?";
+		var otherUid= $("#otheruid").val();
+		var uid=$("#uid").val();
+		url=url+"mineId="+uid+"&"+"otherId="+otherUid
+		window.open(url);
+	}
+	
+	function chatroom() {
+		var url="http://localhost:8080/user/chatroom?";
+		var otherUid= $("#otheruid").val();
+		var uid=$("#uid").val();
+		url=url+"mineId="+uid+"&"+"roomId="+otherUid
+		window.open(url);
+	}
+	</script>
+
+
+	<header id="iframe-header"> <iframe src="/_header.html"style="display:none" id="iframe-header"></iframe>
+	<div id="topnav">
+		<div class="top-header-animation">
+			<div id="particles-js" class="zindex1"></div>
+		</div>
+		<div class="added-element-header"></div>
+	</div>
+	</header>
+
+	<div class="zurb-full" id="otherDiv">
+		<input type="hidden" id="uid" th:value="${uid}" /> <input type="hidden"
+			id="otheruid" th:value="${otheruid}" />
+		<!-- th:value="${otheruid}" -->
+		<div class="new-row zurb-row">
+			<div class="zurb-div-xl-12">
+				<div class="card m-b-20">
+					<h5 class="card-header">个人资料</h5>
+					<div class="card-body" >
+					<div id="cbody">
+					
+					</div>
+			<table class="table table-bordered table-striped mb-0"
+								id="otherTab">
+								<tbody id="tbody">
+
+								</tbody>
+
+							</table>
+							<div id="button">
+		
+							</div>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+	<div class="zurb-contents">
+		<div class="new-row zurb-row">
+			<div class="zurb-div-12 text-center">
+				Eon Admin © 2018-2019. All Rights Reserved By: <strong>
+					Spruko</strong>
+			</div>
+		</div>
+	</div>
+	</footer>
+	<a href="#body-main " id="goTop"><i class="fa fa-chevron-up"></i></a>
+
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/waves.js"></script>
+	<script src="/js/jquery.slimscroll.js"></script>
+	<script src="/js/modernizr.min.js"></script>
+	<script src="/js/plugins/particles.js-master/particles.js"></script>
+	<script src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+	<script src="/js/plugins/parsleyjs/dist/parsley.min.js"></script>
+	<script src="/js/equalize.min.js"></script>
+	<script src="/js/jquery.core.js"></script>
+	<script src="/js/jquery.app.js"></script>
+	<script src="/js/created.js"></script>
+	<script src="/js/created.js"></script>
+
+</body>
+<style>
+#headImg {
+	width: 100px;
+	height: 100px;
+}
+
+#otherTab ,#button{
+	margin-top: 10px;
+}
+
+#otherDiv {
+	margin-top: 100px;
+}
+#venImg{
+margin-left:10px;
+height: 100px;
+}
+</style>
+</html>

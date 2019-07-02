@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sample 1</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Sample content" name="description" />
+  <meta content="sample-author" name="author" />
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/plugins/morris/morris.css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/style/demo.css" rel="stylesheet" type="text/css" />
+<!--javascript-->
+<script src="/js/jquery.min.js"></script>
+<script src="/scripts/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="/scripts/demo.js" type="text/javascript"></script>
+<script type="text/javascript"
+    src="http://api.map.baidu.com/api?v=2.0&ak=IDvNBsejl9oqMbPF316iKsXR"></script>
+<script type="text/javascript"
+    src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet"
+    href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+</head>
+
+<body id="body-main">
+	
+  <header id="iframe-header">
+    <iframe src="_header.html" style="display:none" id="iframe-header"></iframe>
+    <div id="topnav">
+      <div class="top-header-animation">
+        <div id="particles-js" class="zindex1"></div>
+      </div>
+      <div class="added-element-header"></div>
+    </div>
+  </header>
+  <section>
+    <div class="spinner">
+      <div class="loader">
+        <div class="bounce loader1 "></div>
+        <div class="bounce loader2 "></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <div class="zurb-full">
+        <div class="new-row zurb-row">
+          <div class="zurb-div-sm-12">
+            <div class="hide-bread float-right">
+              <ol class="breadcrumb ">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item">Dashboard 1</li>
+              </ol>
+            </div>
+            <h4 class="page-title">Dashboard 1</h4>
+          </div>
+        </div>
+        <div class="new-row zurb-row">
+          <div class="zurb-div-lg-3 zurb-div-sm-6">
+            <div class="zurb-div-box">
+              <div class="new-row zurb-row">
+                <div class="zurb-div-md-5 text-center">
+                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                    <i class="ti-server"></i>
+                  </div>
+                </div>
+                <div class="zurb-div-md-7">
+                  <div class="numbers">
+                    <p class="font-13">Capacity</p> 105GB
+                  </div>
+                </div>
+              </div>
+              <div class="progress progress-bar-warning-alt m-t-10 progress-sm mb-0">
+                <div class="progress-bar progress-bar-warning w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-lg-3 zurb-div-sm-6">
+            <div class="zurb-div-box">
+              <div class="new-row zurb-row">
+                <div class="zurb-div-md-5 text-center">
+                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                    <i class="ti-wallet"></i>
+                  </div>
+                </div>
+                <div class="zurb-div-md-7">
+                  <div class="numbers">
+                    <p class="font-13">Revenue</p> $2,345
+                  </div>
+                </div>
+              </div>
+              <div class="progress progress-bar-success-alt m-t-10 progress-sm mb-0">
+                <div class="progress-bar progress-bar-success w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-lg-3 zurb-div-sm-6">
+            <div class="zurb-div-box">
+              <div class="new-row zurb-row">
+                <div class="zurb-div-md-5 text-center">
+                  <div class="icon icon-shape bg-gradient-danger rounded-circle text-white">
+                    <i class="ti-info-alt"></i>
+                  </div>
+                </div>
+                <div class="zurb-div-md-7">
+                  <div class="numbers">
+                    <p class="font-13">Errors</p> 34
+                  </div>
+                </div>
+              </div>
+              <div class="progress progress-bar-danger-alt  m-t-10 progress-sm mb-0">
+                <div class="progress-bar progress-bar-danger w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-lg-3 zurb-div-sm-6">
+            <div class="zurb-div-box">
+              <div class="new-row zurb-row">
+                <div class="zurb-div-md-5 text-center">
+                  <div class="icon icon-shape bg-gradient-info rounded-circle text-white">
+                    <i class="ti-twitter-alt"></i>
+                  </div>
+                </div>
+                <div class="zurb-div-md-7">
+                  <div class="numbers">
+                    <p class="font-13">Followers</p> +55
+                  </div>
+                </div>
+              </div>
+              <div class="progress progress-bar-info-alt progress-sm m-t-10 mb-0">
+                <div class="progress-bar progress-bar-info w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-row zurb-row">
+          <div class="zurb-div-xl-8">
+            <div class="card m-b-20" >
+              <p5 class="card-header">Visitors</p5>
+              <div class="card-body">
+								<div class="demo_main"
+		style="width: 100%; height: 100%; margin: 0px auto;">
+
+
+		<fieldset class="demo_content">
+			<div style="min-height: 400px; width: 100%;" id="map"></div>
+			<script type="text/javascript">
+				var coachs;
+				var venues;
+				$(function() {
+
+					$.ajax({
+						url : "/dto/findAll",
+						success : function(map) {
+							coachs = map.coachs;
+							venues = map.venues;
+						}
+					})
+
+				})
+
+				function map_init() {
+
+					var map = new BMap.Map("map"); // 创建Map实例
+					var point = new BMap.Point(104.072222, 30.663025); //地图中心点
+					map.centerAndZoom(point, 15); // 初始化地图,设置中心点坐标和地图级别。
+					map.enableScrollWheelZoom(true); //启用滚轮放大缩小
+					//地图、卫星、混合模式切换
+					map.addControl(new BMap.MapTypeControl({
+						mapTypes : [ BMAP_NORMAL_MAP, BMAP_SATELLITE_MAP,
+								BMAP_HYBRID_MAP ]
+					}));
+					//向地图中添加缩放控件
+					var ctrlNav = new window.BMap.NavigationControl({
+						anchor : BMAP_ANCHOR_TOP_LEFT,
+						type : BMAP_NAVIGATION_CONTROL_LARGE
+					});
+					map.addControl(ctrlNav);
+					//向地图中添加缩略图控件
+					var ctrlOve = new window.BMap.OverviewMapControl({
+						anchor : BMAP_ANCHOR_BOTTOM_RIGHT,
+						isOpen : 1
+					});
+					map.addControl(ctrlOve);
+					//向地图中添加比例尺控件
+					var ctrlSca = new window.BMap.ScaleControl({
+						anchor : BMAP_ANCHOR_BOTTOM_LEFT
+					});
+					map.addControl(ctrlSca);
+
+					var point = new Array(); //存放标注点经纬信息的数组
+					var marker = new Array(); //存放标注点对象的数组
+					var info = new Array(); //存放提示信息窗口对象的数组
+					var searchInfoWindow = new Array();//存放检索信息窗口对象的数组
+					var num = coachs.length;
+					for (var i = 0; i < coachs.length; i++) {
+
+						/* var p0 = markerArr[i].point.split(",")[0]; //
+						var p1 = markerArr[i].point.split(",")[1]; //按照原数组的point格式将地图点坐标的经纬度分别提出来 */
+						var p0 = coachs[i].vx; //vx
+						var p1 = coachs[i].vy; //vy
+						point[i] = new window.BMap.Point(p0, p1); //循环生成新的地图点
+						marker[i] = new window.BMap.Marker(point[i]); //按照地图点坐标生成标记
+						map.addOverlay(marker[i]);
+
+						marker[i].setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+						//显示marker的title，marker多的话可以注释掉
+						var label = new window.BMap.Label(coachs[i].name
+								+ "(教练)", {
+							offset : new window.BMap.Size(20, -10)
+						});
+						marker[i].setLabel(label);
+						// 创建信息窗口对象
+						/* info[i] = "<p style=’font-size:12px;lineheight:1.8em;’>"
+						       + "</br>简介：流派为"
+						       + coachs[i].school
+						       + "</br>地址："
+						       +coachs[i].province+coachs[i].city+coachs[i].county+coachs[i].town+coachs[i].detail
+						       + "</br> 电话：" + coachs[i].phone + "</br></p>"
+						       +'<a href="coach/findCoachDetailMsg?uid='+coachs[i].uid+'">了解更多</a>'
+						       + '<img src="'+coachs[i].img+'" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' */
+						info[i] = '<div style="margin:0;line-height:20px;padding:2px;">'
+								+ '<img src="'+coachs[i].img+'" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>'
+								+ '姓名：'
+								+ coachs[i].name
+								+ '  职位：教练<br/>简介：主修流派'
+								+ coachs[i].school
+								+ '<br/>地址：'
+								+ coachs[i].province
+								+ coachs[i].city
+								+ coachs[i].county
+								+ coachs[i].town
+								+ coachs[i].detail
+								+ '<br/>'
+								+ '<a href="coach/findCoachDetailMsg?uid='
+								+ coachs[i].uid + '">了解更多</a>'
+
+								+ '</div>';
+						//创建百度样式检索信息窗口对象                       
+						searchInfoWindow[i] = new BMapLib.SearchInfoWindow(map,
+								info[i], {
+									title : coachs[i].name + "(教练)", //标题
+									width : 290, //宽度
+									height : 100, //高度
+									panel : "panel", //检索结果面板
+									enableAutoPan : true, //自动平移
+									searchTypes : [ BMAPLIB_TAB_SEARCH, //周边检索
+									BMAPLIB_TAB_TO_HERE, //到这里去
+									BMAPLIB_TAB_FROM_HERE //从这里出发
+									]
+								});
+						//添加点击事件
+						marker[i].addEventListener("click", (function(k) {
+							// js 闭包
+							return function() {
+								//将被点击marker置为中心
+								map.centerAndZoom(point[k], 18);
+								//在marker上打开检索信息窗口
+								searchInfoWindow[k].open(marker[k]);
+							}
+						})(i));
+					}
+					for (var i = 0; i < venues.length; i++) {
+						p0 = venues[i].vx; //
+						p1 = venues[i].vy; //按照原数组的point格式将地图点坐标的经纬度分别提出来
+						point[i + num] = new window.BMap.Point(p0, p1); //循环生成新的地图点
+						marker[i + num] = new window.BMap.Marker(point[i + num]); //按照地图点坐标生成标记
+						map.addOverlay(marker[i + num]);
+
+						//显示marker的title，marker多的话可以注释掉
+						label = new window.BMap.Label(venues[i].name, {
+							offset : new window.BMap.Size(20, -10)
+						});
+						marker[i + num].setLabel(label);
+						// 创建信息窗口对象
+						info[i + num] = '<div style="margin:0;line-height:20px;padding:2px;">'
+								+ '<img src="'+venues[i].list[1].img+'" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>'
+
+								+ '场馆名称：'
+								+ venues[i].name
+								+ '<br/>电话：'
+								+ venues[i].phone
+								+ '<br/>简介：'
+								+ venues[i].descrie
+								+ '<br/>地址：'
+								+ venues[i].province
+								+ venues[i].city
+								+ venues[i].county
+								+ venues[i].town
+								+ venues[i].detail
+								+ '<br/>'
+
+								+ '<a href="coach/findCoachDetailMsg?uid='
+								+ venues[i].uid + '">了解更多</a>'
+
+								+ '</div>';
+						//创建百度样式检索信息窗口对象                       
+						searchInfoWindow[i + num] = new BMapLib.SearchInfoWindow(
+								map, info[i + num], {
+									title : venues[i].name, //标题
+									width : 290, //宽度
+									height : 140, //高度
+									panel : "panel", //检索结果面板
+									enableAutoPan : true, //自动平移
+									searchTypes : [ BMAPLIB_TAB_SEARCH, //周边检索
+									BMAPLIB_TAB_TO_HERE, //到这里去
+									BMAPLIB_TAB_FROM_HERE //从这里出发
+									]
+								});
+						//添加点击事件
+						marker[i + num].addEventListener("click",
+								(function(k) {
+									// js 闭包
+									return function() {
+										//将被点击marker置为中心
+										map.centerAndZoom(point[k + num], 18);
+										//在marker上打开检索信息窗口
+										searchInfoWindow[k + num].open(marker[k
+												+ num]);
+									}
+								})(i));
+					}
+				}
+
+				//异步调用百度js
+				function map_load() {
+					var load = document.createElement("script");
+					load.src = "http://api.map.baidu.com/api?v=2.0&ak=IDvNBsejl9oqMbPF316iKsXR&callback=map_init";
+					document.body.appendChild(load);
+				}
+				window.onload = map_load;
+			</script>
+		</fieldset>
+	</div>
+               <!-- <div class="text-center">
+                  <ul class="list-inline chart-detail-list">
+                    <li class="list-inline-item">
+                      <h5 class="text-purple"><i class="fa fa-circle m-r-5"></i>Mens</h5>
+                    </li>
+                    <li class="list-inline-item">
+                      <h5 class="text-info"><i class="fa fa-circle m-r-5"></i>Womens</h5>
+                    </li>
+                  </ul>
+                </div>
+                <div id="morris-area-example" class="mh"></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-xl-4">
+            <div class="card m-b-20">
+              <h5 class="card-header">Lucky Winner Award</h5>
+              <div class="p-20  bg-muted">
+                <div class="card-body text-center">
+                  <div class="d-flex justify-content-center m-b-30 floating"><img alt="" class="" src="images/reward.svg"></div>
+                  <h4 class="header-title m-b-20">Award Winner</h4>
+                  <p>expound the actual teachings of the great explorer builder the master-builder. No one rejects, dislikes.</p>
+                  <a class="btn  btn-outline-secondary btn-rounded  mb-0" href="#">View More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-row zurb-row">
+          <div class="zurb-div-xl-12">
+            <div class="card m-b-20">
+              <h5 class="card-header">Ongoing Projects</h5>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table mb-0 table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>Project Lead</th>
+                        <th>Project Name</th>
+                        <th>Start Date</th>
+                        <th>Dead Line</th>
+                        <th>budget</th>
+                        <th>Status</th>
+                        <th>Team</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img src="images/users/avatar-1.jpg" class="rounded-circle thumb-sm" alt="friend"></td>
+                        <td>Necko Admin</td>
+                        <td>21-6-2018</td>
+                        <td>31-8-2018</td>
+                        <td>$2,678</td>
+                        <td><label class="badge badge-pink">QA</label></td>
+                        <td>web designer</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/users/avatar-2.jpg" class="rounded-circle thumb-sm" alt="friend"></td>
+                        <td>Fork Managment</td>
+                        <td>15-5-2018</td>
+                        <td>16-8-2018</td>
+                        <td>$5,678</td>
+                        <td><label class="badge badge-primary">Early Stage</label></td>
+                        <td>Uk designers</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/users/avatar-3.jpg" class="rounded-circle thumb-sm" alt="friend"></td>
+                        <td>Den Wordpress theme</td>
+                        <td>23-6-2018</td>
+                        <td>26-8-2018</td>
+                        <td>$3,876</td>
+                        <td><label class="badge badge-info">Finishing</label></td>
+                        <td>External experts</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/users/avatar-4.jpg" class="rounded-circle thumb-sm" alt="friend"></td>
+                        <td>Hzero Beauty theme</td>
+                        <td>12-5-2018</td>
+                        <td>29-7-2018</td>
+                        <td>$6,342</td>
+                        <td><label class="badge badge-secondary">Wating for client</label></td>
+                        <td>Sw Dev team</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/users/avatar-5.jpg" class="rounded-circle thumb-sm" alt="friend"></td>
+                        <td>Medc Psd theme</td>
+                        <td>23-6-2018</td>
+                        <td>31-7-2018</td>
+                        <td>$2,435</td>
+                        <td><label class="badge badge-warning">Desiging</label></td>
+                        <td>Uk designers</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/users/avatar-6.jpg" class="rounded-circle thumb-sm" alt="friend"></td>
+                        <td>steal busniess Theme</td>
+                        <td>01/01/2017</td>
+                        <td>31/05/2017</td>
+                        <td>$3,786</td>
+                        <td><label class="badge badge-success">Early Stage</label></td>
+                        <td>web developer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-row zurb-row">
+          <div class="zurb-div-xl-4">
+            <div class="card project-box m-b-20">
+              <h5 class="card-header">PSD templates</h5>
+              <div class="card-body">
+                <div class="badge badge-secondary">Completed</div>
+                <p class="text-secondary text-uppercase m-b-20 font-13">Photoshop</p>
+                <p class="text-muted font-13">LSed ut perspiciatis unde omnis iste accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<a href="#"
+                    class="font-600 text-dark">Read More</a></p>
+                <div class="project-members m-b-20">
+                  <span class="m-r-5 font-600">Team :</span>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mat Helme">
+                    <img src="images/users/avatar-12.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Michael Zenaty">
+                    <img src="images/users/avatar-1.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="James Anderson">
+                    <img src="images/users/avatar-2.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">89</h3>
+                    <p class="text-dark">Posts</p>
+                  </li>
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">986</h3>
+                    <p class="text-dark">Comments</p>
+                  </li>
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">789</h3>
+                    <p class="text-dark">Likes</p>
+                </ul>
+                <p class="font-600 m-b-5">Progress <span class="text-secondary pull-right">50%</span></p>
+                <div class="progress progress-bar-secondary-alt progress-sm m-b-5">
+                  <div class="progress-bar progress-bar-secondary progress-animated wow animated animated w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-xl-4">
+            <div class="card project-box m-b-20">
+              <h5 class="card-header">HTML & CSS templates</h5>
+              <div class="card-body">
+                <div class="badge badge-success">Completed</div>
+                <p class="text-success text-uppercase m-b-20 font-13">Web Design</p>
+                <p class="text-muted font-13">LSed ut perspiciatis unde omnis iste accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<a href="#"
+                    class="font-600 text-dark">Read More</a></p>
+                <div class="project-members m-b-20">
+                  <span class="m-r-5 font-600">Team :</span>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mat Helme">
+                    <img src="images/users/avatar-3.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Michael Zenaty">
+                    <img src="images/users/avatar-4.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="James Anderson">
+                    <img src="images/users/avatar-6.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mat Helme">
+                    <img src="images/users/avatar-6.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kevin Grant">
+                    <img src="images/users/avatar-7.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">178</h3>
+                    <p class="text-dark">Posts</p>
+                  </li>
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">1,234</h3>
+                    <p class="text-dark">Comments</p>
+                  </li>
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">897</h3>
+                    <p class="text-dark">Likes</p>
+                </ul>
+                <p class="font-600 m-b-5">Progress <span class="text-success pull-right">75%</span></p>
+                <div class="progress progress-bar-success-alt progress-sm m-b-5">
+                  <div class="progress-bar progress-bar-success progress-animated wow animated animated w-78" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-xl-4">
+            <div class="card project-box m-b-20">
+              <h5 class="card-header">WordPress templates</h5>
+              <div class="card-body">
+                <div class="badge badge-danger">Completed</div>
+                <p class="text-danger text-uppercase m-b-20 font-13">Web Development</p>
+                <p class="text-muted font-13">LSed ut perspiciatis unde omnis iste accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<a href="#"
+                    class="font-600 text-dark">Read More</a></p>
+                <div class="project-members m-b-20">
+                  <span class="m-r-5 font-600">Team :</span>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mat Helme">
+                    <img src="images/users/avatar-8.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Michael Zenaty">
+                    <img src="images/users/avatar-9.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="James Anderson">
+                    <img src="images/users/avatar-10.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mat Helme">
+                    <img src="images/users/avatar-11.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Gavin Martin">
+                    <img src="images/users/avatar-12.jpg" class="rounded-circle thumb-sm" alt="friend" />
+                  </a>
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">97</h3>
+                    <p class="text-dark">Posts</p>
+                  </li>
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">856</h3>
+                    <p class="text-dark">Comments</p>
+                  </li>
+                  <li class="list-inline-item">
+                    <h3 class="mb-0">867</h3>
+                    <p class="text-dark">Likes</p>
+                </ul>
+                <p class="font-600 m-b-5">Progress <span class="text-danger pull-right">68%</span></p>
+                <div class="progress progress-bar-danger-alt progress-sm m-b-5">
+                  <div class="progress-bar progress-bar-danger progress-animated wow animated animated w-56" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-row zurb-row">
+          <div class="zurb-div-lg-4">
+            <div class="card m-b-20">
+              <h5 class="card-header">Visitors</h5>
+              <div class="card-body">
+                <div class="media m-b-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-1.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <a href="#" class="text-dark">Nathaniel Bustos</a>
+                    <div class="text-muted small">Manager</div>
+                    <a href="" class="text-secondary font-13">Reply</a>
+                  </div>
+                  <button type="button" class="btn btn-secondary btn-sm d-block">Follow</button>
+                </div>
+                <div class="media m-b-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-2.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <a href="#" class="text-dark">Latanya Kinard</a>
+                    <div class="text-muted small">Web Designer</div>
+                    <a href="" class="text-pink font-13">Reply</a>
+                  </div>
+                  <button type="button" class="btn btn-pink btn-sm d-block">Follow</button>
+                </div>
+                <div class="media m-b-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-3.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <a href="#" class="text-dark">Dennis Dalton</a>
+                    <div class="text-muted small">Manager</div>
+                    <a href="" class="text-purple font-13">Reply</a>
+                  </div>
+                  <button type="button" class="btn btn-purple btn-sm d-block">Follow</button>
+                </div>
+                <div class="media m-b-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-4.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <a href="#" class="text-dark">George Lujan</a>
+                    <div class="text-muted small">Founder</div>
+                    <a href="" class="text-info font-13">Reply</a>
+                  </div>
+                  <button type="button" class="btn btn-info btn-sm d-block">Follow</button>
+                </div>
+                <div class="media m-b-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-5.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <a href="#" class="text-dark">Andrea Carr</a>
+                    <div class="text-muted small">Accountant</div>
+                  </div>
+                  <button type="button" class="btn btn-custom btn-sm d-block">Follow</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-lg-4">
+            <div class="card m-b-20">
+              <h5 class="card-header">Notification</h5>
+              <div class="card-body">
+                <ul class="list-group m-b-0 user-list border">
+                  <li class="list-group-item">
+                    <a href="#" class="user-list-item">
+                      <div class="avatar">
+                        <i class="mdi mdi-circle text-custom"></i>
+                      </div>
+                      <div class="user-desc">
+                        <span class="name">Project Success meet</span>
+                        <span class="desc">August 12, 2018 - 4:30pm to 9:30 pm</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="user-list-item">
+                      <div class="avatar">
+                        <i class="mdi mdi-circle text-pink"></i>
+                      </div>
+                      <div class="user-desc">
+                        <span class="name">Meeting to USA Clients</span>
+                        <span class="desc">July 28, 2018 - 2:00pm to 5:30pm</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="user-list-item">
+                      <div class="avatar">
+                        <i class="mdi mdi-circle text-success"></i>
+                      </div>
+                      <div class="user-desc">
+                        <span class="name">Delivery to Products</span>
+                        <span class="desc">July 19, 2018 - 10:00am to 1:30pm</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="user-list-item">
+                      <div class="avatar">
+                        <i class="mdi mdi-circle text-info"></i>
+                      </div>
+                      <div class="user-desc">
+                        <span class="name">Meet with teamleader</span>
+                        <span class="desc">July 12, 2018 - 1:00pm to 3:30pm</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="user-list-item">
+                      <div class="avatar">
+                        <i class="mdi mdi-circle text-puple "></i>
+                      </div>
+                      <div class="user-desc">
+                        <span class="name">Environment Activities</span>
+                        <span class="desc">July 02, 2018 - 10:00pm to 5:00pm</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="m-t-20 text-center">
+                  <a href="" class="btn btn-sm btn-outline-custom btn-rounded waves-effect waves-light btn-sm">View Notifiaction</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zurb-div-lg-4">
+            <div class="card m-b-20">
+              <h5 class="card-header">User Profile</h5>
+              <div class="card-body">
+                <div class="d-flex m-b-20">
+                  <a href="#" class="profile-info-name">
+                    <img src="images/profile.jpg" class="img-thumbnail" alt="">
+                  </a>
+                  <div class="task-thumb-details">
+                    <h4 class="mb-0"><a href="#">Sam Davies</a></h4>
+                    <p class="mt-0">Senior Architect</p>
+                    <a href="" class="btn btn-sm btn-rounded btn-outline-custom waves-effect waves-light">Contact Me</a>
+                  </div>
+                </div>
+                <table class="table table-hover m-b-0 border">
+                  <tbody>
+                    <tr>
+                      <td><i class=" fa fa-tasks"></i></td>
+                      <td>New Task Issued</td>
+                      <td><span class="badge badge-info"> 02</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa fa-file-code-o"></i></td>
+                      <td>New Projects</td>
+                      <td><span class="badge badge-danger"> 10</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa fa-exclamation-triangle"></i></td>
+                      <td>Task Pending</td>
+                      <td> <span class="badge badge-success">14</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa fa-envelope"></i></td>
+                      <td>Inbox</td>
+                      <td> <span class="badge badge-primary">45</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class=" fa fa-bell-o"></i></td>
+                      <td>New Notification</td>
+                      <td><span class="badge badge-warning"> 09</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-row zurb-row">
+          <div class="zurb-div-xl-12">
+            <div class="card m-b-20">
+              <h5 class="card-header">User Feedback</h5>
+              <div class="card-body">
+                <div class="media m-b-10">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-10.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-0">Gavin Murray</h5>
+                    <p class="font-13 text-muted mb-0"> If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything. </p>
+                    <a href="#"><span class="badge badge-pill  btn-outline-custom ">Reply</span></a>
+                  </div>
+                </div>
+                <div class="media m-b-10 m-t-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-12.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-0">Pippa Hughes</h5>
+                    <p class="font-13 text-muted mb-0"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris commodo consequat. </p>
+                    <a href=""><span class="badge badge-pill  btn-outline-custom ">Reply</span></a>
+                    <div class="media m-t-20 m-b-20">
+                      <div class="d-flex mr-3">
+                        <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-9.jpg"> </a>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-0">Maria Dowd</h5>
+                        <p class="font-13 text-muted mb-0"> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
+                        <a href=""><span class="badge  btn-outline-custom badge-secondary badge-pill">Reply</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media m-b-10 m-t-20">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object  btn-outline-custom rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-1.jpg"> </a>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-0">Emily Lewis</h5>
+                    <p class="font-13 text-muted mb-0"> Nor again is there anyone who loves or pursues or desires to obtain pain of itself is pain. </p>
+                    <a href=""><span class="badge btn-outline-custom badge-pill">Reply</span></a>
+                  </div>
+                </div>
+                <div class="media m-b-10 m-t-20 ">
+                  <div class="d-flex mr-3">
+                    <a href="#"> <img class="media-object rounded-circle thumb-sm" alt="64x64" src="images/users/avatar-11.jpg"> </a>
+                  </div>
+                  <div class="media-body mb-0">
+                    <input type="text" class="form-control btn-rounded" placeholder="Some text value...">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="zurb-contents">
+      <div class="new-row zurb-row">
+        <div class="zurb-div-12 text-center"> Eon Admin © 2018-2019. All Rights Reserved By: <strong> Spruko</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#body-main " id="goTop"><i class="fa fa-chevron-up"></i></a>
+  <script  src="js/jquery.min.js"></script>
+  <script  src="js/popper.min.js"></script>
+  <script  src="js/bootstrap.min.js"></script>
+  <script  src="js/waves.js"></script>
+  <script  src="js/jquery.slimscroll.js"></script>
+  <script  src="js/modernizr.min.js"></script>
+  <script  src="js/plugins/particles.js-master/particles.js"></script>
+  <script  src="js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+  <!--[if IE]>
+      <script  type="text/javascript" src="js/plugins/jquery-knob/excanvas.js"></script>
+      <![endif]-->
+  <script  src="js/plugins/jquery-knob/jquery.knob.js"></script>
+  <script  src="js/plugins/morris/morris.min.js"></script>
+  <script  src="js/plugins/raphael/raphael-min.js"></script>
+  <script  src="js/equalize.min.js"></script>
+  <script  src="js/jquery.core.js"></script>
+  <script  src="js/jquery.app.js"></script>
+  <script  src="js/created.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      ! function($) {
+        "use strict";
+        var Dashboard1 = function() {
+          this.$realData = []
+        };
+        //creates area chart
+        Dashboard1.prototype.createAreaChart = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, lineColors) {
+            Morris.Area({
+              element: element,
+              pointSize: 4,
+              lineWidth: 2,
+              data: data,
+              xkey: xkey,
+              ykeys: ykeys,
+              labels: labels,
+              hideHover: 'auto',
+              resize: true,
+              gridLineColor: '#eef0f2',
+              lineColors: lineColors
+            });
+          },
+          Dashboard1.prototype.init = function() {
+            //creating area chart
+            var $areaData = [{
+              y: '2012',
+              a: 30,
+              b: 20
+            }, {
+              y: '2013',
+              a: 95,
+              b: 85
+            }, {
+              y: '2014',
+              a: 70,
+              b: 60
+            }, {
+              y: '2015',
+              a: 95,
+              b: 85
+            }, {
+              y: '2016',
+              a: 70,
+              b: 60
+            }, {
+              y: '2017',
+              a: 95,
+              b: 105
+            }, {
+              y: '2018',
+              a: 110,
+              b: 80
+            }];
+            this.createAreaChart('morris-area-example', 0, 0, $areaData, 'y', ['a', 'b'], ['Mens 1', 'Womens 2'], ['#04A8FB', "#871faf"]);
+          },
+          //init
+          $.Dashboard1 = new Dashboard1, $.Dashboard1.Constructor = Dashboard1
+      }(window.jQuery),
+      //initializing
+      function($) {
+        "use strict";
+        $.Dashboard1.init();
+      }(window.jQuery);
+    }, false);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 轮播（Carousel）插件的标题</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+function hi(){
+	$("#myCarousel").css("display","none");
+	$("#button1").css("display","none");
+}
+$(function(){
+	$.ajax({
+		url:"/ad/findAllAd",
+		type:"post",
+		success:function(res){
+			alert(res);
+			var context1="";
+			var context2="";
+			for (var i = 0; i < res.length; i++) {
+				if(i==0){
+					context1+='<li data-target="#myCarousel" data-slide-to="'+i+'" class="active" ></li>';
+					context2+='<div class="item active">'
+						+'<img src="'+res[i].img+'" alt="Second slide">'
+						+'<div class="carousel-caption">'+res[i].title+'</div>'
+					+'</div>';
+				}else{
+					context1+='<li data-target="#myCarousel" data-slide-to="'+i+'"></li>';
+					context2+='<div class="item">'
+					+'<img src="'+res[i].img+'" alt="Second slide">'
+					+'<div class="carousel-caption">'+res[i].title+'</div>'
+				+'</div>';
+				}
+				
+			}
+			alert(context1);
+			alert(context2);
+			$("#linumber").append(context1);
+			$("#adimg").append(context2);
+			
+		}
+		
+	})
+	
+	
+	
+}) 
+</script>
+<input type="button" name="" id="button1" value="" onclick="hi()" />	
+<div id="myCarousel" class="carousel slide" style="display: block" >
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators" id="linumber">
+		
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner" id="adimg">
+	
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	</a>
+</div> 
+
+</body>
+</html>

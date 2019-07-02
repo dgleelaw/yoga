@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		function send() {
+			
+			$.ajax({
+				url : "/circle/insertCircle",
+				type : 'post',//HTTP请求类型
+				data : {
+					uid : $("#uid").val(),
+					name : $("#name").val(),
+					title : $("#title").val(),
+					content : $("#content").val(),
+					img : $("#img").val()
+				},
+				success : function(data) {
+					alert(data)
+				}
+			});
+
+		}
+		function upfile() {
+			var formData = new FormData($("#form")[0]);
+			/* 	formData.append("type", type);//也可以添加其他字段 */
+			$
+					.ajax({
+						type : "post",
+						url : "/upload",
+						data : formData,
+						contentType : false,
+						processData : false,
+						success : function(res) {
+							if (res == null) {
+								alert("请选择图片文件");
+							}
+							var context = '<img id="a" src="'+res+'" ><br>'
+									+ '<input type="text" hidden  id="img" value="'+res+'" />';
+						
+							$("#form").append(context);
+						}
+					})
+		}
+	</script>
+	<form id="form" enctype="multipart/form-data">
+		<input type="file" name="picture" /><br> <input type="button"
+			value="上 传" onclick="upfile()" /><br>
+	</form>
+	用户uid
+	<input type="text" id="uid" value="" />
+	<br> 用户name
+	<input type="text" id="name" value="" />
+	<br> title
+	<input type="text" id="title" value="" />
+	<br> content
+	<input type="text" id="content" value="" />
+	<br>
+	
+	<input type="button" name="" id="" value="提交" onclick="send()" />
+	<br>
+
+</body>
+</html>

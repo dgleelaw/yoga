@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta charset="utf-8" />
+<title>Sample 1</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Sample content" name="description" />
+	<meta content="sample-author" name="author" />
+	<link rel="shortcut icon" href="/images/favicon.ico">
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="body-main">
+
+
+		<input type="hidden" class="form-control" id="totalpage">
+		<input type="hidden" class="form-control" id="nowpage" value="0">
+	<header id="iframe-header"> <iframe src="/_header.html"
+		style="display:none" id="iframe-header"></iframe>
+	<div id="topnav">
+		<div class="top-header-animation">
+			<div id="particles-js" class="zindex1"></div>
+		</div>
+		<div class="added-element-header"></div>
+	</div>
+	</header>
+	<section>
+	<div class="spinner">
+		<div class="loader">
+			<div class="bounce loader1 "></div>
+			<div class="bounce loader2 "></div>
+		</div>
+	</div>
+	</section>
+	<div class="wrapper">
+		<div class="zurb-full">
+			<div class="new-row zurb-row">
+				<div class="zurb-div-sm-12">
+					<div class="hide-bread float-right">
+					<!-- 	<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Pages</a></li>
+							<li class="breadcrumb-item">Profile</li>
+						</ol> -->
+					</div>
+					<h4 class="page-title">我的朋友圈</h4>
+				</div>
+			</div>
+			<!-- 朋友圈 -->
+			<div class="new-row zurb-row">
+				<div class="zurb-div-xl-12">
+					<div class="card m-b-20 text-white">
+						<div class="card-body text-center profile-bg" id="headinfo">
+							<!-- <div class="p-20">
+								<a href="#" class="profile-info-name  m-b-20"><img
+									src="images/profile.jpg"
+									class="img-thumbnail thumb-md rounded-circle" alt=""></a>
+								<h4 class="card-text">Matt Walsh</h4>
+								<p class="text-white ">Project Manager</p>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="zurb-div-xl-4">
+					<div class="card m-b-20">
+						<h5 class="card-header">相互关注的好友</h5>
+						<div class="card-body">
+							<div data-spy="scroll" data-target="#navbar-example"
+								data-offset="0"
+								style="height: 280px; overflow: auto; position: relative;">
+								<ul class="list-group m-b-0 user-list" id="Myfollows">
+									<!-- 修改的地方 -->
+
+
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="card m-b-20">
+						<h5 class="card-header">我的关注人</h5>
+						<div class="card-body">
+							<div data-spy="scroll" data-target="#navbar-example"
+								data-offset="0"
+								style="height: 180px; overflow: auto; position: relative;">
+								<ul class="list-group m-b-0 user-list" id="myconcerned">
+									<!-- 修改的地方 -->
+
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="card m-b-20">
+						<h5 class="card-header">我的粉丝</h5>
+						<div class="card-body">
+							<div data-spy="scroll" data-target="#navbar-example"
+								data-offset="0"
+								style="height: 180px; overflow: auto; position: relative;">
+								<ul class="list-group m-b-0 user-list" id="myfensi">
+									<!-- 修改的地方 -->
+
+
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="zurb-div-xl-8">
+					<div class="card m-b-20">
+						<h5 class="card-header">关注人动态</h5>
+						<div class="card-body">
+							<div data-spy="scroll" data-target="#navbar-example"
+								data-offset="0"
+								style="height: 470px; overflow: auto; position: relative;" id=allcircleodme>
+								<!-- 任务 -->
+							<!-- <div class="comment">
+									<img src="/upload/d78bf28d-f51c-437d-b927-bd6e9dfbb477无标题.png" alt=""
+										class="comment-avatar">
+										<div class="comment-body">
+											<div class="comment-text">
+												<div class="comment-header">
+													<a href="#" title="">王德富</a><span>2019.12</span>
+												</div>
+												内容
+											</div>
+											<div class="m-t-10">
+												<a href=""> <img
+													src="/upload/d78bf28d-f51c-437d-b927-bd6e9dfbb477无标题.png"
+													alt="" class="thumb-md"></a>
+											</div>
+											<div class="comment">
+												<img src="/upload/d78bf28d-f51c-437d-b927-bd6e9dfbb477无标题.png" alt=""
+													class="comment-avatar">
+													<div class="comment-body">
+														<div class="comment-text">
+															<div class="comment-header">
+																<a href="#" title="">伟泽</a><span>2019</span>
+															</div>
+															牛逼啊啊哈哈哈
+														</div>
+													</div>
+											</div>
+										</div>
+								</div> -->
+								<!-- 结束 -->
+							</div>
+							<div class="m-t-30 text-center">
+								<!-- <input type="button" class="btn btn-secondary waves-effect waves-light btn-sm" onclick="" value="展示更多">
+								<input type="button" class="btn btn-secondary waves-effect waves-light btn-sm" onclick="" value="展示之前"> -->
+									<span class="input-group-btn">
+				<input type="button" class="btn btn-default" value="更多内容" onclick="next()" />
+				</span>
+					<span class="input-group-btn">
+				<input type="button" class="btn btn-default" value="之前内容" onclick="before()" />
+				</span>
+							</div>
+						</div>
+					</div>
+					<div class="card m-b-20">
+						<div class="card-body">
+							<div class="clearfix">
+								<div class="pull-left">
+									<a href="#"
+										class="btn btn-pink btn-sm waves-effect waves-light "> <i
+										class="fa fa-user"></i> 发送朋友圈
+									</a>
+									<!-- <a href="#" class="btn btn-sm btn-purple waves-effect waves-light">
+							        <i class="fa fa-user-plus"></i> Following</a>
+							      <a href="#" class="btn btn-sm btn-custom waves-effect waves-light ">
+							        <i class="fa fa-paper-plane"></i> Message</a> -->
+								</div>
+								<!-- <div class="pull-right hide-phone">
+							      <img src="images/users/avatar-2.jpg" class="rounded-circle thumb-sm" alt="friend" />
+							      <img src="images/users/avatar-3.jpg" class="rounded-circle thumb-sm" alt="friend" />
+							      <img src="images/users/avatar-4.jpg" class="rounded-circle thumb-sm" alt="friend" />
+							      <img src="images/users/avatar-5.jpg" class="rounded-circle thumb-sm" alt="friend" />
+							    </div> -->
+							</div>
+							<hr>
+
+
+								<h4 class="header-title m-t-20 m-b-10">描述</h4>
+								<!-- <p> which of us ever undertakes laborious physical exercise sure there isn't anything embarrassing hidden in the middle of text majority have suffered alteration But who has any right to find fault with a man who chooses to enjoy a
+							    pleasure that has no annoying consequences.</p>
+							  <button type="button" class="btn btn-sm btn-default waves-effect waves-light ">Read More</button> -->
+								<form method="post" class="m-t-20 mb-0">
+									<span class="input-icon icon-right"> <textarea rows="2"
+											class="form-control" placeholder="记录今天心情" id="content"></textarea>
+									</span>
+									<div class="p-t-10 pull-right">
+										<button type="button"
+											class="btn  btn-success waves-effect waves-light"
+											onclick="sendCircle()">发送</button>
+									</div>
+									<ul class="nav nav-pills profile-pills m-t-20">
+										<!--   <li>
+							        <a href="#"><i class="fa fa-user"></i></a>
+							      </li>
+							      <li>
+							        <a href="#"><i class="fa fa-video-camera"></i></a>
+							      </li> -->
+										<!-- 选取图片-->
+										<li>
+											<!-- 	<a href="#"><i class=" fa fa-camera"></i></a> -->
+										
+										</li>
+										<!-- <li>
+							        <a href="#"><i class="fa fa-map-marker"></i></a>
+							      </li>
+							      <li>
+							        <a href="#"><i class="fa fa-smile-o"></i></a>
+							      </li> -->
+									</ul>
+								</form>
+									<form id="myform" enctype="multipart/form-data">
+												<input type="file" name="file" class=" fa fa-camera" />
+												<br> <input type="button" value="上 传"
+													onclick="upfile()" /><br>
+											</form>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="zurb-div-xl-8"></div>
+			</div>
+
+		</div>
+		<footer class="footer">
+		<div class="zurb-contents">
+			<div class="new-row zurb-row">
+				<div class="zurb-div-12 text-center">
+					Eon Admin © 2018-2019. All Rights Reserved By: <strong>
+						Spruko</strong>
+				</div>
+			</div>
+		</div>
+		</footer>
+		
+		<a href="#body-main " id="goTop"><i class="fa fa-chevron-up"></i></a>
+		<script src="/js/jquery.min.js"></script>
+
+
+	<script src="/js/popper.min.js"></script>
+		
+	<script src="/js/bootstrap.min.js"></script>
+	
+	<script src="/js/waves.js"></script>
+	
+	<script src="/js/jquery.slimscroll.js"></script>
+	<script src="/js/modernizr.min.js"></script>
+	<script src="/js/plugins/particles.js-master/particles.js"></script>
+	<script src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+	
+	<script src="/js/equalize.min.js"></script>
+	<script src="/js/jquery.core.js"></script>
+	<script src="/js/jquery.app.js"></script>
+	<script src="/js/created.js"></script>
+	<script src="/js/profile.js"></script>
+</body>
+
+</html>

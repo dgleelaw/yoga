@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/public/jquery.min.js"></script>
+<script>
+	$(function(){
+		var venuesId = [[${po.id}]]
+		$("#sign").click(function(){
+			$.ajax({
+				url:"/coach/signVenues",
+				type:"post",
+				data:{vid:venuesId,cid:3},
+				datatype:"json",
+				success:function(data){
+					alert(data);
+				}
+			})
+		})
+		
+	})
+	
+</script>
+</head>
+<body>
+	图片:<br/>
+	名称:<label th:text="${po.name}"></label><br/>
+	地址:<label th:text="${po.addr}"></label><br/>
+	电话:<label th:text="${po.phone}"></label><br/>
+	描述：<label th:text="${po.detail}"></label><br/>
+	<input type="button" value="签约" id="sign">
+</body> 
+</html>

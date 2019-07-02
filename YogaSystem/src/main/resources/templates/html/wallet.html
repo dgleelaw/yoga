@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi" name="viewport" >
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/weichat.css">
+	<title>My Wallet</title>
+	<link rel="shortcut icon" href="/images/favicon.ico">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="include"></div>
+	<div class="wrap1">
+		<iframe src="/_header.html" style="display:none" id="iframe-header"></iframe>
+		<div class="wallet-content">
+			 <div class="wallet-box">
+			 	<img src="/headimg/aq.png">
+			 	<h2>我的零钱</h2>
+			 	<h3>￥<label th:text="${money}">20.58</label></h3>
+				<button class="in-int">充值</button>	
+				<button class="out">返回</button>
+				<input type="hidden" >
+			 </div>
+		</div> 
+	</div>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/waves.js"></script>
+	<script src="/js/jquery.slimscroll.js"></script>
+	<script src="/js/modernizr.min.js"></script>
+	<script src="/js/plugins/particles.js-master/particles.js"></script>
+	<script src="/js/plugins/particles.js-master/particlesapp_bubble.js"></script>
+	<script src="/js/plugins/waypoints/jquery.waypoints.min.js"></script>
+	<script src="/js/plugins/counterup/jquery.counterup.min.js"></script>
+	<script src="/js/equalize.min.js"></script>
+	<script src="/js/jquery.core.js"></script>
+	<script src="/js/jquery.app.js"></script>
+	 <script type="text/javascript">
+	 
+	 	window.onload=function()
+	 	{
+	 		$("#include").load("/_header.html");
+	 		var getOut=document.getElementsByClassName("out")[0];
+	 		var inInt=document.getElementsByClassName("in-int")[0];
+	 		getOut.onclick=function()
+	 		{
+	 			window.location.href="/index";
+	 		};
+	 		inInt.onclick=function()
+	 		{
+	 			window.location.href="/html/recharge.html";
+	 		};
+	 	};
+	 </script>
+</body>
+</html>
